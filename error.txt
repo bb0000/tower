@@ -1,0 +1,72 @@
+In file included from main.cc:6:
+./characterImpl.h:10:14: error: expected ';' at end of declaration list
+    int maxHp const;
+             ^
+             ;
+./characterImpl.h:11:21: error: expected ';' at end of declaration list
+    std::string type const;
+                    ^
+                    ;
+In file included from main.cc:7:
+In file included from ./character.h:3:
+In file included from ./human.h:3:
+./enemy.h:11:5: error: unknown type name 'floor'
+    floor *f;
+    ^
+./enemy.h:12:5: error: unknown type name 'Type'
+    Type tp;
+    ^
+./enemy.h:15:61: error: unknown type name 'floor'
+    enemy(int hp, double atk, double def, int col, int row, floor *f, Type tp);
+                                                            ^
+./enemy.h:15:71: error: unknown type name 'Type'
+    enemy(int hp, double atk, double def, int col, int row, floor *f, Type tp);
+                                                                      ^
+./enemy.h:22:5: error: unknown type name 'Type'
+    Type getType();
+    ^
+./enemy.h:26:25: error: unknown type name 'troll'
+    virtual void attack(troll &t);
+                        ^
+./enemy.h:27:25: error: unknown type name 'drow'
+    virtual void attack(drow &d);
+                        ^
+./enemy.h:28:25: error: unknown type name 'vampire'
+    virtual void attack(vampire &v);
+                        ^
+./enemy.h:29:25: error: unknown type name 'goblin'
+    virtual void attack(goblin &g);
+                        ^
+./enemy.h:30:25: error: unknown type name 'normal'
+    virtual void attack(normal &n);
+                        ^
+./enemy.h:33:50: error: unknown type name 'floor'
+    virtual enemy *createEnemy(int row, int col, floor *f)=0;
+                                                 ^
+In file included from main.cc:7:
+In file included from ./character.h:3:
+./human.h:7:29: error: unknown type name 'floor'
+    human(int row, int col, floor *f);
+                            ^
+./human.h:9:42: error: unknown type name 'floor'
+    enemy *createEnemy(int row, int col, floor *f);
+                                         ^
+In file included from main.cc:7:
+In file included from ./character.h:4:
+./dwarf.h:7:29: error: unknown type name 'floor'
+    dwarf(int row, int col, floor *f);
+                            ^
+./dwarf.h:9:42: error: unknown type name 'floor'
+    enemy *createEnemy(int row, int col, floor *f);
+                                         ^
+In file included from main.cc:7:
+In file included from ./character.h:5:
+./elf.h:7:27: error: unknown type name 'floor'
+    elf(int row, int col, floor *f);
+                          ^
+./elf.h:9:42: error: unknown type name 'floor'
+    enemy *createEnemy(int row, int col, floor *f);
+                                         ^
+fatal error: too many errors emitted, stopping now [-ferror-limit=]
+20 errors generated.
+make: *** [main.o] Error 1
